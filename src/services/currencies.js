@@ -6,6 +6,6 @@ export default class CurrenciesService {
   }
 
   fetchCurrencies (query) {
-    return this.api.get(`/currencies?${query}`)
+    return this.api.get(`/exchangerates/tables/A`)
   }
 }

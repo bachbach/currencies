@@ -4,11 +4,14 @@ class APIInterceptor {
   constructor (baseURL = `${process.env.REACT_APP_API_URL}/${process.env.REACT_APP_API_VERSION}`) {
     this.baseURL = baseURL
 
-    const settings = {
-      baseURL: this.baseURL
+    const config = {
+      baseURL: this.baseURL,
+      headers: {
+        Accept: 'application/json',
+      }
     }
 
-    this.api = axios.create(settings)
+    this.api = axios.create(config)
   }
 
 
