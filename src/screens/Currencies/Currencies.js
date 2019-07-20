@@ -10,7 +10,7 @@ export default class Currencies extends PureComponent {
   render() {
     console.log(this.props.currencies)
     return <div>
-      <AllCurrencies currencies={this.props.currencies}/>
+      <AllCurrencies currencies={this.props.currencies} toggleBookmark={this.props.toggleBookmark}/>
     </div>
   }
 }

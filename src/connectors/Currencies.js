@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { fetchCurrencies } from 'ducks/currencies'
+import { fetchCurrencies, toggleBookmark } from 'ducks/currencies'
 import { getCurrenciesAsArray } from 'selectors/currencies'
 import Currencies from 'screens/Currencies/Currencies'
 
@@ -8,7 +8,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchCurrencies: () => dispatch(fetchCurrencies())
+  fetchCurrencies: () => dispatch(fetchCurrencies()),
+  toggleBookmark: (currency) => dispatch(toggleBookmark(currency))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Currencies)
