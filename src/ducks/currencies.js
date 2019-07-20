@@ -32,7 +32,7 @@ export default (state = initState, action) => {
       return {
         entries: {
           ...state.entries,
-          ...transformById(action.currencies)
+          ...transformById(action.currencies, 'code')
         }
       }
     default:

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import CurrenciesService from 'services/currencies'
 
 export default class Currencies extends PureComponent {
   componentDidMount() {
@@ -9,7 +8,7 @@ export default class Currencies extends PureComponent {
   render() {
     console.log(this.props)
     return <div>
-      hello from currencie
+      hello from currencies
     </div>
   }
 }
