@@ -1,14 +1,16 @@
 import React, { PureComponent } from 'react'
+import AllCurrencies from './components/AllCurrencies'
 
 export default class Currencies extends PureComponent {
   componentDidMount() {
+    console.log('?????')
     this.props.fetchCurrencies()
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.props.currencies)
     return <div>
-      hello from currencies
+      <AllCurrencies currencies={this.props.currencies}/>
     </div>
   }
 }
