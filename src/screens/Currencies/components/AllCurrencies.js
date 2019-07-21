@@ -8,7 +8,9 @@ export default class AllCurrencies extends PureComponent {
       <CurrencyItem
         key={currency.code}
         currency={currency}
-        toggleBookmark={this.props.toggleBookmark}
+        bookmarks={this.props.bookmarks}
+        bookmark={this.props.bookmark}
+        unbookmark={this.props.unbookmark}
       />
     )
   }
