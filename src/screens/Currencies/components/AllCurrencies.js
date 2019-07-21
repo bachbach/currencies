@@ -10,6 +10,7 @@ export default class AllCurrencies extends PureComponent {
         key={currency.code}
         currency={currency}
         bookmarks={this.props.bookmarks}
+        bookmarksKeys={this.props.bookmarksKeys}
         bookmark={this.props.bookmark}
         unbookmark={this.props.unbookmark}
       />
@@ -17,7 +18,6 @@ export default class AllCurrencies extends PureComponent {
   }
 
   render() {
-    console.log(this.props.currencies)
     return <div className='all-currencies'>
       {this.currencies}
     </div>

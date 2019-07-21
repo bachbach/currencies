@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 import { fetchCurrencies, bookmark, unbookmark } from 'ducks/currencies'
-import { getCurrenciesAsArray, getBookmarks } from 'selectors/currencies'
+import { getCurrenciesAsArray, getBookmarksKeys, getBookmarksAsArray } from 'selectors/currencies'
 import Currencies from 'screens/Currencies/Currencies'
 
 const mapStateToProps = state => ({
   currencies: getCurrenciesAsArray(state),
-  bookmarks: getBookmarks(state)
+  bookmarksKeys: getBookmarksKeys(state),
+  bookmarks: getBookmarksAsArray(state)
 })
 
 const mapDispatchToProps = dispatch => ({

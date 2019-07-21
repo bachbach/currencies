@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
 import AllCurrencies from './components/AllCurrencies'
 
 export default class Currencies extends PureComponent {
@@ -7,13 +8,32 @@ export default class Currencies extends PureComponent {
   }
 
   render() {
-    return <div>
-      <AllCurrencies
-        currencies={this.props.currencies}
-        bookmarks={this.props.bookmarks}
-        bookmark={this.props.bookmark}
-        unbookmark={this.props.unbookmark}
-      />
-    </div>
+    return (
+      <Tabs>
+        <TabList>
+          <Tab>All Currencies</Tab>
+          <Tab>Bookmarks</Tab>
+        </TabList>
+    
+        <TabPanel>
+          <AllCurrencies
+            currencies={this.props.currencies}
+            bookmarks={this.props.bookmarks}
+            bookmarksKeys={this.props.bookmarksKeys}
+            bookmark={this.props.bookmark}
+            unbookmark={this.props.unbookmark}
+          />
+        </TabPanel>
+        <TabPanel>
+          <AllCurrencies
+            currencies={this.props.bookmarks}
+            bookmarks={this.props.bookmarks}
+            bookmarksKeys={this.props.bookmarksKeys}
+            bookmark={this.props.bookmark}
+            unbookmark={this.props.unbookmark}
+          />
+        </TabPanel>
+      </Tabs>
+    )
   }
 }

@@ -6,10 +6,9 @@ export default class CurrencyItem extends PureComponent {
   unbookmark = () => this.props.unbookmark(this.props.currency)
 
   get toggleButton() {
-    return this.props.bookmarks[this.props.currency.code]
+    return this.props.bookmarksKeys.indexOf(this.props.currency.code) >= 0
       ? <button onClick={this.unbookmark}>unbookmark</button>
       : <button onClick={this.bookmark}>bookmark</button>
-
   }
 
   render() {

@@ -9,3 +9,13 @@ export const getCurrenciesAsArray = createSelector(
   getCurrencies,
   (currencies) => transformToArray(currencies)
 )
+
+export const getBookmarksAsArray = createSelector(
+  getBookmarks,
+  (bookmarks) => transformToArray(bookmarks)
+)
+
+export const getBookmarksKeys = createSelector(
+  getBookmarks,
+  (bookmarks) => Object.keys(bookmarks)
+)
