@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import CurrencyItem from './CurrencyItem'
+import './AllCurrencies.scss'
 
 export default class AllCurrencies extends PureComponent {
 
@@ -17,8 +18,8 @@ export default class AllCurrencies extends PureComponent {
 
   render() {
     console.log(this.props.currencies)
-    return <ul>
+    return <div className='all-currencies'>
       {this.currencies}
-    </ul>
+    </div>
   }
 }

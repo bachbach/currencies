@@ -11,11 +11,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchCurrencies: () => dispatch(fetchCurrencies()),
   bookmark: (currency) => dispatch(bookmark(currency)),
-  unbookmark: (currency) => {
-    console.warn('????', currency)
-    return dispatch(unbookmark(currency))
-  }
-
+  unbookmark: (currency) => dispatch(unbookmark(currency))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Currencies)

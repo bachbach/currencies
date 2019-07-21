@@ -1,0 +1,23 @@
+.currency_item {
+  height: 260px;
+  width: 240px;
+  position: relative;
+  border: 1px solid rgba(220,225,228,.64);
+  border-radius: 4px;
+  background: #fff;
+  margin: 8px;
+}
+
+.currency_item__container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+
+  & > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
